@@ -14,8 +14,8 @@ class MessageListCreateAPIView(generics.ListCreateAPIView):
     def get_queryset(self):
         # Get the current user
         user = self.request.user
-        # Filter messages where the current user is the receiver
-        return Message.objects.filter(receiver=user)
+        # Filter messages where the current user is either the sender or the receiver
+        return Message.objects.filter(Q(sender=user) | Q(receiver=user))
 
     def perform_create(self, serializer):
         # Set the sender of the message as the current user before saving
@@ -42,8 +42,12 @@ class MessageRetrieveUpdateDestroyAPIView(generics.RetrieveDestroyAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        # Filter messages where the current user is either the sender or the receiver
-        return Message.objects.filter(Q(sender=user) | Q(receiver=user))
+        # Get the message id from the URL
+        message_id = self.kwargs['pk']
+        # Update the 'is_read' field of the message to True
+        Message.objects.filter(pk=message_id, receiver=user).update(is_read=True)
+        # Return filtered queryset of messages for the current user
+        return Message.objects.filter(receiver=user)
 
     def destroy(self, request, *args, **kwargs):
         # Get the message instance
