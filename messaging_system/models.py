@@ -15,12 +15,8 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 # Model for representing messages
 class Message(models.Model):
-    sender = models.ForeignKey(
-        User, related_name="sent_messages", on_delete=models.CASCADE
-    )
-    receiver = models.ForeignKey(
-        User, related_name="received_messages", on_delete=models.CASCADE
-    )
+    sender = models.ForeignKey(User, related_name="sent_messages", on_delete=models.CASCADE)
+    receiver = models.ForeignKey(User, related_name="received_messages", on_delete=models.CASCADE)
     message = models.TextField()
     subject = models.CharField(max_length=255)
     creation_date = models.DateTimeField(auto_now_add=True)
