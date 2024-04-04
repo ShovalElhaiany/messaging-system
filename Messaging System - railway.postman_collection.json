@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "bd32b711-10d1-4a44-ba2f-b5238965d89a",
-		"name": "Messaging System",
+		"_postman_id": "b9851323-e18f-4527-b376-7dfd28ef1216",
+		"name": "Messaging System - railway",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26674407"
 	},
@@ -21,15 +21,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/get-token/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/get-token/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"get-token",
 						""
@@ -45,7 +44,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token ae4f8d4ddaa173ad34cd4a42f4a043fcb83ca8c4",
+						"value": "Token <token>",
 						"type": "text"
 					}
 				],
@@ -59,15 +58,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/api/messages/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -84,20 +82,19 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token ae4f8d4ddaa173ad34cd4a42f4a043fcb83ca8c4",
+						"value": "Token <token>",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/1/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/api/messages/1/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -115,20 +112,19 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token ae4f8d4ddaa173ad34cd4a42f4a043fcb83ca8c4",
+						"value": "Token <token>",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/api/messages/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -148,7 +144,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token ae4f8d4ddaa173ad34cd4a42f4a043fcb83ca8c4",
+						"value": "Token <token>",
 						"type": "text"
 					}
 				],
@@ -162,15 +158,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/unread-messages/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/api/unread-messages/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"unread-messages",
@@ -187,20 +182,19 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token ae4f8d4ddaa173ad34cd4a42f4a043fcb83ca8c4",
+						"value": "Token <token>",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/1/",
-					"protocol": "http",
+					"raw": "https://messaging-system.up.railway.app/api/messages/1/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messaging-system",
+						"up",
+						"railway",
+						"app"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
